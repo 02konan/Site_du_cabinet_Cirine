@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centre de Formation Éducatif</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+    <link rel="stylesheet" href="public/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <script src="public/card.js"></script>
+  </head>
+  <body>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/aos/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script
+      type="module"
+      src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.6.2/countUp.min.js"
+    ></script>
+    <script src="public/main.js"></script>
+
+    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
+      <!-- logo du site -->
+      <a class="navbar-brand" href="#"
+        ><img
+          src="public/img/NEXLOGO.jpg"
+          alt="Logo"
+          width="70"
+          height="70"
+          class="d-inline-block align-text-top"
+      /></a>
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#accueil">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#formations">Formations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#formateurs">Formateurs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">À Propos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+            <h1 data-aos="fade-down">Bienvenue à notre Centre de Formation</h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="200">
+              Formez-vous pour l'avenir avec nos experts
+            </p>
+            <a
+              href="#formations"
+              class="btn btn-primary btn-lg"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              >Découvrir nos formations</a
+            >
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-award display-4 text-primary mb-3"></i>
+                <h5 class="card-title">Certifications Internationales</h5>
+                <p class="card-text">
+                  Nos formations sont reconnues par des organismes
+                  internationaux, garantissant une qualité exceptionnelle.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="card shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-shield-check display-4 text-success mb-3"></i>
+                <h5 class="card-title">Accréditations Officielles</h5>
+                <p class="card-text">
+                  Nous sommes accrédités par des institutions reconnues,
+                  comme Le Fonds de Développement de la Formation Professionnelle (FDFP).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="card shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-people display-4 text-warning mb-3"></i>
+                <h5 class="card-title">Partenariats Stratégiques</h5>
+                <p class="card-text">
+                  Nous collaborons avec des entreprises et des universités pour
+                  offrir des opportunités uniques à nos auditeurs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formations Section -->
+    <section id="formations" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Nos Formations</h2>
+        <div
+          id="formationsCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner" id="carouselContent"></div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#formationsCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#formationsCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics" class="py-5 bg-success text-white">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up">
+            <div class="stats-item">
+              <i class="bi bi-calendar-check display-4 mb-3"></i>
+              <h2 class="counter">15</h2>
+              <p class="stats-title">Années d'Expérience</p>
+            </div>
+          </div>
+          <div
+            class="col-md-4 mb-4 mb-md-0"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="stats-item">
+              <i class="bi bi-people display-4 mb-3"></i>
+              <h2 id="people-counter" class="counter">+500</h2>
+              <p class="stats-title">Personnes Formées</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="stats-item">
+              <i class="bi bi-building display-4 mb-3"></i>
+              <h2 id="Patenair" class="counter">+10</h2>
+              <p class="stats-title">Partenaires</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formateurs Section -->
+    <section id="formateurs" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">
+          Nos Formateurs Experts
+        </h2>
+        <div class="row">
+          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="trainer-card text-center">
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a"
+                class="rounded-circle mb-3"
+                alt="Thomas Martin"
+              />
+              <h4>Thomas Martin</h4>
+              <p class="text-primary mb-2">Expert Développement Web</p>
+              <p class="small">
+                15 ans d'expérience en développement web et architecture
+                logicielle.
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="trainer-card text-center">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2"
+                class="rounded-circle mb-3"
+                alt="Sophie Dubois"
+              />
+              <h4>Sophie Dubois</h4>
+              <p class="text-primary mb-2">Marketing Digital</p>
+              <p class="small">
+                Consultante en marketing digital avec une expertise en SEO et
+                réseaux sociaux.
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="trainer-card text-center">
+              <img
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+                class="rounded-circle mb-3"
+                alt="Pierre Durand"
+              />
+              <h4>Pierre Durand</h4>
+              <p class="text-primary mb-2">Gestion de Projet</p>
+              <p class="small">
+                Certifié PMP avec plus de 10 ans d'expérience en gestion de
+                projets agiles.
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="800">
+            <div class="trainer-card text-center">
+              <img
+                src="https://images.unsplash.com/photo-1580489944761-15a19d654956"
+                class="rounded-circle mb-3"
+                alt="Marie Laurent"
+              />
+              <h4>Marie Laurent</h4>
+              <p class="text-primary mb-2">UX/UI Design</p>
+              <p class="small">
+                Spécialiste en design d'interface et expérience utilisateur.
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nos Locaux Section -->
+    <section id="nos-locaux" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Nos Locaux</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="gallery-item position-relative">
+              <img
+                src="public/img/e58a489e39.jpg"
+                alt="Salle de Formation"
+                class="img-fluid rounded"
+              />
+              <div class="overlay">
+                <p class="text-white">Salle de Formation</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="gallery-item position-relative">
+              <img
+                src="public/img/115f9a90d0.jpg"
+                alt="Salle de Réunion"
+                class="img-fluid rounded"
+              />
+              <div class="overlay">
+                <p class="text-white">Salle de Réunion</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="gallery-item position-relative">
+              <img
+                src="public/img/WhatsApp Image 2025-04-17 à 21.07.20_de13835e.jpg"
+                alt="Espace de Détente"
+                class="img-fluid rounded"
+              />
+              <div class="overlay">
+                <p class="text-white">Espace de Détente</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <h2>À Propos de Nous</h2>
+            <p>
+              Le Mot du <strong>Président Directeur Général</strong> du Cabinet CERIN Chers partenaires et
+              amis, Nous, Cabinet CERIN, sommes heureux de vous présenter notre
+              catalogue de formations 2025, conçu pour répondre aux défis et aux
+              opportunités de demain.
+            </p>
+            <p>
+              Nos programmes sont le fruit d'une expertise approfondie et d'une
+              compréhension fine des besoins spécifiques de chaque secteur.
+            </p>
+            <p>
+              Nous nous engageons à offrir des formations de haute qualité,
+              adaptées aux réalités actuelles et futures de l'entreprise.
+            </p>
+            <p>
+              Ensemble, bâtissons un avenir où chaque professionnel est équipé
+              des compétences nécessaires pour exceller et innover.
+              Rejoignez-nous dans cette quête de perfectionnement continu et de
+              succès partagé. Bien cordialement,<div class="social-links"><a href="" class="text-success"><i class="bi bi-facebook"></i>Monsieur ADAE K.KOUAME</a>
+              </p></div>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-check-circle"></i> Formateurs experts</li>
+              <li><i class="bi bi-check-circle"></i> Formations pratiques</li>
+              <li>
+                <i class="bi bi-check-circle"></i> Accompagnement personnalisé
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <img
+              src="public/img/2119016ab0.jpg"
+              alt="À propos"
+              class="img-fluid rounded"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-light">
+      <div class="container">
+        <div class="col-lg-12 mt-5" data-aos="fade-up">
+          <h3 class="text-center">Ce que disent nos Auditeurs</h3>
+          <div class="row mt-4">
+            <div class="col-md-4">
+              <div class="feedback-card p-3 shadow-sm rounded">
+                <p>
+                  <i class="bi bi-quote"></i> Une expérience incroyable ! Les
+                  formateurs sont très compétents et les cours sont bien
+                  structurés.
+                </p>
+                <h6 class="mt-3">- Jean Dupont</h6>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feedback-card p-3 shadow-sm rounded">
+                <p>
+                  <i class="bi bi-quote"></i> Grâce à cette formation, j'ai pu
+                  décrocher un emploi dans le domaine de mes rêves.
+                </p>
+                <h6 class="mt-3">- Marie Curie</h6>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feedback-card p-3 shadow-sm rounded">
+                <p>
+                  <i class="bi bi-quote"></i> Un excellent centre de formation
+                  avec un accompagnement personnalisé.
+                </p>
+                <h6 class="mt-3">- Albert Einstein</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Contactez-nous</h2>
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <form>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Votre nom"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Votre email"
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  rows="5"
+                  placeholder="Votre message"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Envoyer
+              </button>
+            </form>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="contact-info mb-4">
+              <h4>Nos Coordonnées</h4>
+              <p>
+                <i class="bi bi-geo-alt"></i> Côte d’Ivoire, Abidjan, Cocody 2
+                Plateaux, Bd des Martyrs, Près du 22-ème Arrondissement
+              </p>
+              <p>RC: CI-ABJ-2014-B-11650 - CC: 1423134H</p>
+              <p>Compte Ecobank N°: CI059 01001 120210932001</p>
+              <p>
+                <i class="bi bi-telephone"></i> 2722391114 / 0778170178 / 0102
+                55 55 50
+              </p>
+              <p><i class="bi bi-envelope"></i> contact@cabinetcerin.com</p>
+            </div>
+            <div id="map" class="map-container"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Nos Coordonnées</h5>
+            <p>
+              <i class="bi bi-geo-alt"></i> Côte d’Ivoire, Abidjan, Cocody 2
+              Plateaux, Bd des Martyrs, Près du 22-ème Arrondissement
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>Information sur nous</h5>
+            <p>
+              <i class="bi bi-telephone"></i>27 22 91 114
+              <i class="bi bi-telephone"></i>07 78 17 01 78
+              <i class="bi bi-telephone"></i>01 02 55 55 50
+            </p>
+            <p><i class="bi bi-envelope"></i>contact@cabinetcerin.com</p>
+          </div>
+
+          <div class="col-md-4 text-md-end">
+            <h5>Suivez-nous</h5>
+            <div class="social-links">
+              <a href="#" class="text-white me-2"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-white me-2"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="#" class="text-white me-2"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
