@@ -122,7 +122,7 @@ function Card_affichez() {
                                         style="height: 150px; object-fit: cover;"/>
                                     
                                     <div class="card-body">
-                                        <h6 class="card-title">${formation.title}</h6> <!-- Titre plus petit -->
+                                        <h6 class="card-title"><strong>${formation.title}</strong></h6> <!-- Titre plus petit -->
                                         <p class="card-text" style="font-size: 0.9rem;">${formation.description}</p>
                                         <button 
                                             class="btn btn-primary btn-sm openModalButton" 
@@ -152,7 +152,7 @@ function Card_affichez() {
                                         style="height: 150px; object-fit: cover;"/>
                                     
                                     <div class="card-body">
-                                        <h6 class="card-title">${formation.title}</h6> <!-- Titre plus petit -->
+                                        <h6 class="card-title"><strong>${formation.title}</strong></h6> <!-- Titre plus petit -->
                                         <p class="card-text" style="font-size: 0.9rem;">${formation.description}</p>
                                         <button 
                                             class="btn btn-primary btn-sm openModalButton" 

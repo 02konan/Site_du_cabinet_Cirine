@@ -236,6 +236,93 @@ footer a:hover {
   .trainer-card {
     margin-bottom: 20px;
   }
+
+  #testimonials .feedback-card {
+    margin-bottom: 20px; /* Ajoute un espacement entre les cartes */
+  }
+
+  #testimonials .row {
+    flex-direction: column; /* Empile les cartes verticalement */
+  }
+
+  #testimonials .col-md-4 {
+    width: 100%; /* Les colonnes prennent toute la largeur */
+  }
+
+  #formations h2 {
+    font-size: 1.5rem; /* Réduit la taille du titre */
+  }
+
+  #formations .carousel-control-prev,
+  #formations .carousel-control-next {
+    display: none; /* Cache les boutons de navigation du carousel */
+  }
+
+  #formations .carousel-inner {
+    padding: 0 10px; /* Ajoute un peu de marge intérieure pour le contenu */
+  }
+
+  /* Ajuste la section Hero */
+  #accueil {
+    padding: 50px 15px; /* Réduit le padding pour éviter le chevauchement */
+    text-align: center;
+  }
+
+  #accueil h1 {
+    font-size: 1.8rem; /* Réduit la taille du titre */
+  }
+
+  #accueil p {
+    font-size: 1rem; /* Réduit la taille du texte */
+  }
+
+  #accueil .btn {
+    font-size: 0.9rem; /* Réduit la taille du bouton */
+    padding: 10px 20px;
+  }
+
+  /* Ajuste la section Formations */
+  #formations {
+    padding: 30px 15px; /* Réduit le padding */
+  }
+
+  #formations h2 {
+    font-size: 1.5rem; /* Réduit la taille du titre */
+  }
+
+  #formations .carousel {
+    margin-top: 20px; /* Ajoute un espacement entre le titre et le carousel */
+  }
+
+  #formations .carousel-control-prev,
+  #formations .carousel-control-next {
+    display: none; /* Cache les boutons de navigation sur mobile */
+  }
+
+  .row.mt-5 {
+    margin-top: 20px; /* Réduit l'espacement supérieur */
+  }
+
+  .col-md-4 {
+    margin-bottom: 20px; /* Ajoute un espacement entre les cartes */
+  }
+
+  .card {
+    margin: 0 auto; /* Centre les cartes */
+    width: 90%; /* Réduit la largeur des cartes pour s'adapter à l'écran */
+  }
+
+  .card-body {
+    padding: 15px; /* Réduit le padding interne des cartes */
+  }
+
+  .card-title {
+    font-size: 1.2rem; /* Réduit la taille du titre */
+  }
+
+  .card-text {
+    font-size: 0.9rem; /* Réduit la taille du texte */
+  }
 }
 @media (max-width: 576px) {
   .trainer-card {
@@ -246,6 +333,38 @@ footer a:hover {
   .trainer-card img {
     width: 100px;
     height: 100px;
+  }
+
+  #formations h2 {
+    font-size: 1.2rem; /* Réduit encore plus la taille du titre */
+  }
+
+  #formations .container {
+    padding: 0 15px; /* Réduit les marges latérales */
+  }
+
+  #accueil h1 {
+    font-size: 1.5rem; /* Réduit encore plus la taille du titre */
+  }
+
+  #formations h2 {
+    font-size: 1.2rem; /* Réduit encore plus la taille du titre */
+  }
+
+  .row.mt-5 {
+    flex-direction: column; /* Empile les colonnes verticalement */
+  }
+
+  .card {
+    width: 100%; /* Les cartes prennent toute la largeur */
+  }
+
+  .card-title {
+    font-size: 1rem; /* Réduit encore plus la taille du titre */
+  }
+
+  .card-text {
+    font-size: 0.8rem; /* Réduit encore plus la taille du texte */
   }
 }
 @media (max-width: 992px) {
