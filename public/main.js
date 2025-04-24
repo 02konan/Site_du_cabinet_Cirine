@@ -47,6 +47,10 @@ if (form) {
     form.reset()
   })
 }
+const selection = window.getSelection();
+if (selection.rangeCount > 0) {
+  const range = selection.getRangeAt(0);
+}
 
 function initCounters() {
   const peopleCounter = new CountUp('projects-count', 5000, {
