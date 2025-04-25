@@ -128,7 +128,7 @@ function Card_affichez() {
                                             class="btn btn-primary btn-sm openModalButton" 
                                             data-title="${formation.title}" 
                                             data-description="${formation.description}" 
-                                            data-date="${formation.date}">
+                                            >
                                             En savoir plus
                                         </button>
                                     </div>
@@ -157,8 +157,7 @@ function Card_affichez() {
                                         <button 
                                             class="btn btn-primary btn-sm openModalButton" 
                                             data-title="${formation.title}" 
-                                            data-description="${formation.description}" 
-                                            data-date="${formation.date}"
+                                            data-description="${formation.description}"
                                         >
                                             En savoir plus
                                         </button>
@@ -191,7 +190,6 @@ function informationDetails(information) {
   modal.querySelector(".modal-title").textContent = information.title;
   modal.querySelector(".modal-body").innerHTML = `
     <p><strong>Description:</strong> ${information.description}</p>
-    <p><strong>Date:</strong> ${information.date}</p>
   `;
 
   const bootstrapModal = new bootstrap.Modal(modal);
